@@ -10,6 +10,7 @@ return array(
 	'media'              => MODPATH.'media',
 	'minion'             => MODPATH.'minion',
 	'minion-repo'        => MODPATH.'minion-tasks-repo',
+	'minion-media'       => MODPATH.'minion-tasks-media',
 	'orm'                => MODPATH.'orm',
 	'userguide'          => MODPATH.'userguide',
 	'yform'              => MODPATH.'yform',
