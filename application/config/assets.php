@@ -1,19 +1,19 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 $js_app_file = Kohana::$environment === Kohana::DEVELOPMENT
-	? 'js/app/compiled/app.js'
-	: 'js/app/compiled/app.min.js';
+	? 'js/lib/compiled/app.js'
+	: 'js/lib/compiled/app.min.js';
 
 return array
 (
 	'default-template' => array
 	(
 		array('style', Media::url('css/compiled/styles.css'), 'head'),
-		array('script', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js', 'body'),
-		array('script', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js', 'body', 10),
-		array('script', Media::url('js/mustache.js'), 'body', 10),
-		array('script', Media::url('js/underscore-min.js'), 'body', 10),
-		array('script', Media::url('js/backbone-min.js'), 'body', 20),
+		array('script', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', 'body'),
+		array('script', Media::url('js/vendor/hogan-2.0.0.min.js'), 'body', 10),
+		array('script', Media::url('js/vendor/underscore-1.3.3.min.js'), 'body', 10),
+		// Backbone.js depends on JQuery and Underscore
+		array('script', Media::url('js/vendor/backbone-0.9.2.min.js'), 'body', 20),
 		array('script', Media::url($js_app_file), 'body', 40),
 	),
 );
