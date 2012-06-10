@@ -4,7 +4,7 @@
 		/**
 		 * I define all application classes in here using StudlyCaps.
 		 */
-		Lib: {}
+		Lib: {},
 		/**
 		 * Contains all the templates for rendering in JS.
 		 * Any script tag with a class of 'template' will be places in here
@@ -21,6 +21,6 @@
 		 *
 		 * I use camelCase for class instances.
 		 */
-		router: null, // Will contain the AppRouter instance when the app starts
+		appRouter: null, // Will contain the AppRouter instance when the app starts
 	};
 })();

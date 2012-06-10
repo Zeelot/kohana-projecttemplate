@@ -5,4 +5,4 @@
 		 * Define your routes here.
 		 */
 	});
-}(JQuery, window.App, window.App.Lib));
+}(jQuery, window.App, window.App.Lib));

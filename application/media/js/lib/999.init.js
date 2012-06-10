@@ -7,7 +7,8 @@
 		});
 
 		// Initialize our Router and start the app
-		window.App.Router = new window.App.Lib.AppRouter;
-		Backbone.history.start({pushState: true, root: '/'});
+		App.appRouter = new Lib.AppRouter;
+		// Start the backbone app if the router has been created
+		Backbone.history && Backbone.history.start({pushState: true, root: '/'});
 	});
-})(JQuery, window.App, window.App.Lib, window.App.Templates);
+})(jQuery, window.App, window.App.Lib, window.App.Templates);

@@ -1,8 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 $js_app_file = Kohana::$environment === Kohana::DEVELOPMENT
-	? 'js/lib/compiled/app.js'
-	: 'js/lib/compiled/app.min.js';
+	? 'js/compiled/app.js'
+	: 'js/compiled/app.min.js';
 
 return array
 (
