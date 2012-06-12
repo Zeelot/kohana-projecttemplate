@@ -105,15 +105,6 @@ abstract class Abstract_Controller_Base extends Controller {
 		}
 
 		$csrf = $this->request->post('csrf-token');
-		$has_csrf = ! empty($csrf);
-		$valid_csrf = $has_csrf AND CSRF::valid($csrf);
-
-		if ($has_csrf AND ! $valid_csrf)
-		{
-			// CSRF was submitted but expired
-			return FALSE;
-		}
-
-		return $has_csrf AND $valid_csrf;
+		return ( ! empty($csrf) AND CSRF::valid($csrf));
 	}
 }
