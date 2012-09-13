@@ -4,8 +4,5 @@ class Controller_Main extends Abstract_Controller_Page {
 
 	public function action_index() {}
 
-	public function action_yform()
-	{
-		$this->_view->set('values', $this->request->post());
-	}
+	public function action_yform() {}
 }
