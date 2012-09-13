@@ -6,6 +6,6 @@ class Controller_Main extends Abstract_Controller_Page {
 
 	public function action_yform()
 	{
-		$this->_view->bind('values', $_POST);
+		$this->_view->set('values', $this->request->post());
 	}
 }
