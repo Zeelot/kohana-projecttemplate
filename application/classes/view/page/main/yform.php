@@ -7,7 +7,7 @@ class View_Page_Main_Yform extends Abstract_View_Page
 	public function form()
 	{
 		$yf = YForm::factory()
-			->add_values((array)$this->values)
+			->add_values((array)$this->_values)
 			->add_messages('errors', array
 			(
 				'checkboxes' => 'some error',
