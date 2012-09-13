@@ -1,0 +1,35 @@
+<h1>Some Examples for Mustache Views</h1>
+<br />
+<h2>Example Property</h2>
+<p>{{example_property}}</p>
+<br />
+<h2>Associative Data Array</h2>
+<ul>
+	{{#associative_data_array}}
+	<li>One: {{one}}</li>
+	<li>Two: {{two}}</li>
+	<li>Three: {{three}}</li>
+	{{/associative_data_array}}
+</ul>
+<br />
+<h2>Numeric Data Array</h2>
+<ul>
+	{{#numeric_data_array}}
+	<li>One: {{one}}</li>
+	<li>Two: {{two}}</li>
+	<li>Three: {{three}}</li>
+	{{/numeric_data_array}}
+</ul>
+<br />
+<h2>Values Passed in from Controller</h2>
+<ul>
+	<li>{{name}}</li>
+	<li>{{username}}</li>
+	<li>{{#valid}}Valid!{{/valid}}{{^valid}}Not Valid!{{/valid}}</li>
+</ul>
+<br />
+<h2>Embedded View</h2>
+{{{sub_view}}}
+<br />
+<h2>Partial</h2>
+{{>welcome}}
