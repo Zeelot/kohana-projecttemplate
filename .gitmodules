@@ -30,19 +30,19 @@
 	url = git://github.com/Zeelot/kohana-media.git
 [submodule "modules/minion"]
 	path = modules/minion
-	url = git://github.com/Zeelot/minion-core.git
+	url = git://github.com/Zeelot/kohana-minion.git
 [submodule "modules/minion-tasks-repo"]
 	path = modules/minion-tasks-repo
 	url = git://github.com/Zeelot/minion-tasks-repo.git
 [submodule "modules/git"]
 	path = modules/git
 	url = git://github.com/Zeelot/kohana-git.git
-[submodule "modules/minion-tasks-migrations"]
-	path = modules/minion-tasks-migrations
-	url = git://github.com/Zeelot/minion-tasks-migrations.git
-[submodule "modules/minion-tasks-upgrade"]
-	path = modules/minion-tasks-upgrade
-	url = git://github.com/Zeelot/minion-tasks-upgrade.git
 [submodule "modules/assets"]
 	path = modules/assets
 	url = git://github.com/Zeelot/kohana-assets.git
+[submodule "vagrant/cookbooks"]
+	path = vagrant/cookbooks
+	url = git://github.com/Zeelot/vagrant-cookbooks.git
+[submodule "modules/minion-tasks-media"]
+	path = modules/minion-tasks-media
+	url = git://github.com/Zeelot/minion-tasks-media.git

@@ -1,5 +1,5 @@
 #!/bin/bash
-# 
+#
 # Usage: ./minion [task:name] [--option1=optval1 --option2=optval2]
 #
 # And so on.

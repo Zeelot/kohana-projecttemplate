@@ -1,3 +1,12 @@
+/**
+ * Contains layout-specific SCSS like grids and positioning
+ */
+
+
+// These variables determine the grid sizes
+$blueprint_grid_columns: 16;
+$blueprint_grid_width: 40px;
+
 body {
 	background: $bodyBgColor;
 }
