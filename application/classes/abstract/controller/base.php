@@ -26,6 +26,10 @@ abstract class Abstract_Controller_Base extends Controller {
 
 	public function before()
 	{
+		// Default _values and _filters to _POST and _GET
+		$this->_values = $this->request->post();
+		$this->_filters = $this->request->query();
+
 		try
 		{
 			$this->_view = $this->_response_view();
