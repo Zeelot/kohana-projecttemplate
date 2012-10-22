@@ -1,24 +1,24 @@
 [submodule "system"]
 	path = system
-	url = git://github.com/Zeelot/kohana-core
+	url = git://github.com/kohana/core.git
 [submodule "modules/orm"]
 	path = modules/orm
-	url = git://github.com/Zeelot/kohana-orm
+	url = git://github.com/kohana/orm
 [submodule "modules/database"]
 	path = modules/database
-	url = git://github.com/Zeelot/kohana-database
+	url = git://github.com/kohana/database
 [submodule "modules/unittest"]
 	path = modules/unittest
-	url = git://github.com/Zeelot/kohana-unittest
+	url = git://github.com/kohana/unittest
 [submodule "modules/auth"]
 	path = modules/auth
-	url = git://github.com/Zeelot/kohana-auth
+	url = git://github.com/kohana/auth
 [submodule "modules/image"]
 	path = modules/image
-	url = git://github.com/Zeelot/kohana-image
+	url = git://github.com/kohana/image
 [submodule "modules/userguide"]
 	path = modules/userguide
-	url = git://github.com/Zeelot/kohana-userguide
+	url = git://github.com/kohana/userguide
 [submodule "modules/yform"]
 	path = modules/yform
 	url = git://github.com/Zeelot/kohana-yform.git
@@ -30,7 +30,7 @@
 	url = git://github.com/Zeelot/kohana-media.git
 [submodule "modules/minion"]
 	path = modules/minion
-	url = git://github.com/Zeelot/kohana-minion.git
+	url = git://github.com/kohana/minion.git
 [submodule "modules/minion-tasks-repo"]
 	path = modules/minion-tasks-repo
 	url = git://github.com/Zeelot/minion-tasks-repo.git
