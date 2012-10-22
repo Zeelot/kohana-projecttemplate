@@ -89,7 +89,7 @@ abstract class Abstract_Controller_Base extends Controller {
 		// Removes leading slash if this is not a subdirectory controller
 		$controller_path = trim($directory.'/'.$controller.'/'.$action, '/');
 
-		return Kostache::factory('page/'.$controller_path)
+		return Kostache::factory('Page/'.$controller_path)
 				->assets(new Assets);
 	}
 

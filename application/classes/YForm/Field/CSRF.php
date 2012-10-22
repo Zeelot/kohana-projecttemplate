@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
 
-class YForm_Field_Csrf extends YForm_Field_Hidden {
+class YForm_Field_CSRF extends YForm_Field_Hidden {
 
 	public function __construct($name = 'default')
 	{
