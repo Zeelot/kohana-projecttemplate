@@ -85,6 +85,8 @@ abstract class Abstract_Controller_Base extends Controller {
 		$directory = $this->request->directory();
 		$controller = $this->request->controller();
 		$action = $this->request->action();
+		// The action has not gone through PSR-0 yet
+		$action = str_replace(' ', '_', ucwords(str_replace('_', ' ', $action)));
 
 		// Removes leading slash if this is not a subdirectory controller
 		$controller_path = trim($directory.'/'.$controller.'/'.$action, '/');
