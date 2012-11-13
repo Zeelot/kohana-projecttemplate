@@ -43,6 +43,13 @@ class Format {
 		return preg_replace('/^'.$regex.'$/', $format, $number_clean);
 	}
 
+	/**
+	 * Returns `NULL` if the passed in value fails `Valid::not_empty()`. This is
+	 * a useful filter to use when setting model data.
+	 *
+	 * @param  mixed  $value The value to filter
+	 * @return mixed         The value or NULL
+	 */
 	public static function empty_to_null($value)
 	{
 		return Valid::not_empty($value) ? $value : NULL;
