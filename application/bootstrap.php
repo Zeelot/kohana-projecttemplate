@@ -97,20 +97,6 @@ if (Kohana::$environment != Kohana::PRODUCTION)
 }
 
 /**
- * Set the session save path.
- * @see  http://php.net/session-save-path
- */
-$path = Kohana::$config->load('session')->save_path;
-$real = realpath($path);
-if ( ! is_dir($real) OR ! is_writable($real))
-	throw new Kohana_Exception('Invalid session save path specified: :path',
-		array(':path' => $path));
-
-session_save_path($path);
-
-unset($env, $path, $real);
-
-/**
  * Initialize Kohana, setting the default options.
  *
  * The following options are available:

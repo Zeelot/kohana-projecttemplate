@@ -5,7 +5,7 @@ return array(
 	'index_file'  => '',
 	'charset'     => 'utf-8',
 	'cache_dir'   => APPPATH.'cache',
-	'errors'      => FALSE,
+	'errors'      => TRUE,
 	'profile'     => FALSE,
 	'caching'     => TRUE,
 );
