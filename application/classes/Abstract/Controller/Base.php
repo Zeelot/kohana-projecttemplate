@@ -110,7 +110,7 @@ abstract class Abstract_Controller_Base extends Controller {
 			return FALSE;
 		}
 
-		$csrf = $this->request->post('csrf-token');
-		return ( ! empty($csrf) AND CSRF::valid($csrf));
+		// @TODO: Fix and implement CSRF class
+		return TRUE;
 	}
 }
