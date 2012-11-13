@@ -41,21 +41,4 @@ abstract class Abstract_View_Base extends Kostache_Layout
 		// Remove 'View_' prefix and lowercase
 		return strtolower(substr($class, 5));
 	}
-
-	/**
-	 * Lambda function to alternate between a set of strings
-	 *
-	 * // This will alternate between 'one', 'two', 'three', and 'four'
-	 * {{#alternate}}one|two|three|four{{/alternate}}
-	 *
-	 * @param   string a pipe-separated list of strings
-	 * @return  string
-	 */
-	public function alternate()
-	{
-		return function($string)
-		{
-			return call_user_func_array('Text::alternate', explode('|', $string));
-		};
-	}
 }

@@ -10,4 +10,4 @@ abstract class Abstract_View_Layout extends Abstract_View_Base
 {
 	protected $_layout = 'layout/default';
 
-} // End View_Layout
+}
