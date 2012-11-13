@@ -41,4 +41,24 @@ abstract class Abstract_View_Base extends Kostache_Layout
 		// Remove 'View_' prefix and lowercase
 		return strtolower(substr($class, 5));
 	}
+
+	/**
+	 * Returns `Kohana::APP_VERSION`
+	 *
+	 * @return string  The app version
+	 */
+	public function app_version()
+	{
+		return Kohana::APP_VERSION;
+	}
+
+	/**
+	 * Returns `Kohana::app_revision`
+	 *
+	 * @return string  The app revision
+	 */
+	public function app_revision()
+	{
+		return Kohana::app_revision();
+	}
 }
