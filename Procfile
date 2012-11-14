@@ -1,0 +1,1 @@
+DemoLongThing: ./minion demo:longThing
