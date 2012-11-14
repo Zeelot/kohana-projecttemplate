@@ -112,9 +112,25 @@ if (Kohana::$environment != Kohana::PRODUCTION)
 Kohana::init(Kohana::$config->load('init')->as_array());
 
 /**
- * Attach the file write to logging. Multiple writers are supported.
+ * Attach the configured loggers
  */
-Kohana::$log->attach(new Log_File(APPPATH.'logs'));
+foreach (Kohana::$config->load('logging')->loggers as $logger)
+{
+	if ( ! $logger['enabled'])
+		continue; // This logger is disabled
+
+	$class = $logger['class'];
+	$params = $logger['params'];
+	$levels = $logger['levels'];
+	$min_level = $logger['min_level'];
+
+	$logger_reflection = new ReflectionClass($class);
+	$logger_instance = (count($params))
+		? $logger_reflection->newInstanceArgs($params)
+		: $logger_reflection->newInstance();
+
+	Kohana::$log->attach($logger_instance, $levels, $min_level);
+}
 
 /**
  * Enable modules. Modules are referenced by a relative or absolute path.
