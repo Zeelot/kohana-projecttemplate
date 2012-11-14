@@ -7,3 +7,6 @@
 
 ## Description
 This repository is intended to quickly set up a basic project with all the initial repetitive tasks done for you.
+
+## Foreman Export Command
+`foreman export upstart /etc/init -a "projecttemplate" -l "/home/vagrant/web-app/application/logs" -u vagrant`
