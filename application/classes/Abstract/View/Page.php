@@ -55,6 +55,11 @@ abstract class Abstract_View_Page extends Abstract_View_Layout {
 		), $content);
 	}
 
+	public function media_base_path()
+	{
+		return Media::url('/');
+	}
+
 	/**
 	 * Returns a JSON string to be used in the page header. This is useful
 	 * when we want to send arrays of data from Kohana to the JS application.

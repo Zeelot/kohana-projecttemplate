@@ -6,13 +6,35 @@
 	<title>{{title}}</title>
 
 	<script type="text/javascript">
+		var require = {
+			deps: ['main'],
+			//By default load any module IDs from js/lib
+			baseUrl: '{{media_base_path}}/lib',
+			paths: {
+				'backbone': 'vendor/backbone-0.9.2',
+				'hogan': 'vendor/hogan-2.0.0.amd',
+				'jquery': 'vendor/jquery-1.8.2',
+				'underscore': 'vendor/underscore-1.4.2'
+			},
+			shim: {
+				// Shims are needed for any library that doesn't support AMD
+				'backbone': {
+					deps: ['underscore', 'jquery'],
+					exports: 'Backbone'
+				},
+				'underscore': {exports: '_'}
+			}
+		};
+	</script>
+
+	<script type="text/javascript">
 	// <![CDATA[
 		// Global Kohana object
 		Kohana = {{#js_export}}{{{js_export}}}{{/js_export}}{{^js_export}}{}{{/js_export}};
 	// ]]>
 	</script>
 
-[[assets_head]]
+	[[assets_head]]
 
 </head>
 <body id="{{view_name}}">
