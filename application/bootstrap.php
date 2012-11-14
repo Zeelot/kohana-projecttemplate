@@ -111,6 +111,8 @@ if (Kohana::$environment != Kohana::PRODUCTION)
  */
 Kohana::init(Kohana::$config->load('init')->as_array());
 
+// Always write on add when in CLI scripts
+Log::$write_on_add = PHP_SAPI === 'cli';
 /**
  * Attach the configured loggers
  */
